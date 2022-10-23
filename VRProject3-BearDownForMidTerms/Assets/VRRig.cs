@@ -37,7 +37,7 @@ public class VRRig : MonoBehaviour
     {
         transform.position = headConstraint.position + headBodyOffset;
         transform.forward = Vector3.Lerp(transform.forward,
-            Vector3.ProjectOnPlane(headConstraint.up,Vector3.up).normalized,Time.deltaTime * 1.5f);
+            Vector3.ProjectOnPlane(headConstraint.up,Vector3.up).normalized,Time.deltaTime * 2.5f);
 
         head.Map();
         leftHand.Map();
