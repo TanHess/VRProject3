@@ -25,7 +25,6 @@ public class VRFootIK : MonoBehaviour
     {
         Vector3 rightFootPos = animator.GetIKPosition(AvatarIKGoal.RightFoot);
         RaycastHit hit;
-        Quaternion me;
         bool hasHit = Physics.Raycast(rightFootPos+Vector3.up,Vector3.down,out hit);
         if(hasHit)
         {
