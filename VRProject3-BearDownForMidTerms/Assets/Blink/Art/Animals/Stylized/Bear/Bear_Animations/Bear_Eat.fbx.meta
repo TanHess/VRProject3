@@ -92,7 +92,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.009103482
+      - time: 0.11059908
         functionName: PlayEat
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: a203a61db74d14d0aaae8b988a515920, type: 3}
