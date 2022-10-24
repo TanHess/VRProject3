@@ -5,6 +5,8 @@ using UnityEngine;
 public class BearSoundController : MonoBehaviour
 {
     private Animator animator;
+    public AudioClip snarl;
+    public AudioClip idle;
     private AudioSource sound;
     // Start is called before the first frame update
     void Start()
@@ -16,13 +18,22 @@ public class BearSoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Random.Range(0,100) == 50){
-            sound.Play();
-        }
         
     }
 
-    void PlayGrowl() {
-        sound.Play();
+    void PlaySnarl() {
+        sound.PlayOneShot(Resources.Load<AudioClip>("Sounds/Snarl"), 1.0f);
+    }
+    void PlayIdle(){
+        sound.PlayOneShot(Resources.Load<AudioClip>("Sounds/BearIdle"),0.75f);
+    }
+    void PlayEat() {
+        sound.PlayOneShot(Resources.Load<AudioClip>("Sounds/EatingSound"),1.0f);
+    }
+    void PlayConfused() {
+        sound.PlayOneShot(Resources.Load<AudioClip>("Sounds/BearConfused"),1.0f);
+    }
+    void PlaySleeping() {
+        sound.PlayOneShot(Resources.Load<AudioClip>("Sounds/BearSnoring"),1.0f);
     }
 }
